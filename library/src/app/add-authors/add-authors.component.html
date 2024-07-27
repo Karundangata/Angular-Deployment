@@ -1,0 +1,14 @@
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <label>Authors</label>
+    <input type="text" formControlName="Name" >
+    <input  type="submit" value={{buttonText}}>
+</form>
+
+<div *ngIf="authors" class="authors">
+    <div *ngFor="let author of authors">
+        <h1>{{author.Name}}</h1>
+    <button [routerLink]="['/authors', author.Id]" > Update</button>
+    </div>
+</div>

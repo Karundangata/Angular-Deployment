@@ -1,0 +1,10 @@
+
+<div *ngIf="products">
+
+    <div *ngFor="let product of products">
+        <h1>{{product.Name}}</h1>
+        <p>{{product.Description}}</p>
+        <p>{{product.price | currency}}</p>
+        <button (click)="deleteProduct(product.Id)">Delete</button>
+    </div>
+</div>

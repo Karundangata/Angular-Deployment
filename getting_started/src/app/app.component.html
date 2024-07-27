@@ -1,0 +1,42 @@
+<!-- 
+<app-add-people (onAdd)="addNewPerson($event)" ></app-add-people>
+<app-display [people]="peoples" (onDelete)="deletePerson($event)" ></app-display> -->
+<!-- 
+<p>{{title | uppercase | lowercase}}</p>
+
+<p>{{todaysDate | date:'d -MM -YYYY -- HH- mm' | uppercase}}</p>
+<p>{{money | currency:'KSH '}}</p>
+<p> {{percent|percent}}</p> -->
+
+<!-- <input [(ngModel)]="searchTerm"/>
+
+<button (click)="addProduct()">Add Keyboard</button>
+
+
+<p>{{greeting|async}}</p> -->
+
+<!-- <app-product [products]="products"> -->
+    <!-- <h1> My Products Page</h1> -->
+<!-- </app-product>
+<button (click)="addProduct()">Change</button> -->
+<!-- <app-add-product></app-add-product>
+<app-display-products>
+
+</app-display-products> -->
+<!-- <h1 appChangeBg [color]="'blue'" >Heading one</h1>
+<h1 appHover [hoverColor]="'red'" [default]="'blue'" >Heading2 </h1> -->
+<!-- <p  changeBg >This paragraph is going to have a red background</p> -->
+ <div  *ngIf="condition">
+    <p> Display this when a ceartain condition is true!!</p>
+ </div>
+
+<ng-template [ngIf]="condition">
+    <div >
+        <p> Display this when a ceartain condition is true!!</p>
+     </div>
+ </ng-template> 
+
+
+ <div  *appOurIf="condition">
+    <p> Display this when a ceartain condition is true!!</p>
+ </div>

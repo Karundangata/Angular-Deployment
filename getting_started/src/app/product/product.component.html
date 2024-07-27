@@ -1,0 +1,7 @@
+
+<ng-content></ng-content>
+<div *ngFor=" let product of products ">
+    <h1> {{product.Name}}</h1>
+    <p>{{product.Description | shortenDescription :10}}</p>
+    <p>{{product.price | currency}}</p>
+</div>

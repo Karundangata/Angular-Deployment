@@ -1,0 +1,32 @@
+<div class="app" *ngIf="blogs.length">
+  <div
+    class="item"
+    *ngFor="let blog of blogs"
+    [routerLink]="['/blog', blog.Id]"
+  >
+    <img src="{{ blog.ImageUrl }}" alt="{{ blog.Heading }}" />
+    <h1>{{ blog.Heading }}</h1>
+  </div>
+</div>
+<div *ngIf="!blogs.length">
+  <p><i> No Blogs found!!</i></p>
+</div>
+
+<div class="sample">
+  <input
+    type="checkbox"
+    (change)="onChange()"
+    [value]="showParagraph$ | async"
+  />
+
+  <p *ngIf="showParagraph$ | async">Show this if true</p>
+
+  <br />
+  <button (click)="onIncrement()">+</button>
+
+  <h1>{{count$ | async }}</h1>
+  <button  (click)="onDecrement()">-</button>
+  <br />
+
+  <button  (click)="onReset()">Reset</button>
+</div>

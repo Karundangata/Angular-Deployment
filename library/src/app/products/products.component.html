@@ -1,0 +1,8 @@
+
+<div *ngIf="products">
+    <ul *ngFor="let product of products">
+        <!-- <li [routerLink]="['/products',product.id]"  >{{product.title}}</li> -->
+
+        <li (click)="loadProduct(product.id)" >{{product.title}}</li>
+    </ul>
+</div>

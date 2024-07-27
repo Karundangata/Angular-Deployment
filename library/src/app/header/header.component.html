@@ -1,0 +1,9 @@
+<div class="container">
+    <a routerLink="" routerLinkActive="active" 
+     [routerLinkActiveOptions]="{exact:true}">Home</a>
+    <a [routerLink]="['login']" routerLinkActive="active"  *ngIf="!auth.showStatus()">Login</a>
+    <a href="#" *ngIf="!auth.showStatus()" routerLink="register">Register</a>
+    <a routerLink="" (click)="auth.logout()" *ngIf="auth.showStatus()">Logout</a>
+    <a routerLink="products"  *ngIf="auth.showStatus()"  routerLinkActive="active">Products</a>
+    <a routerLink="authors/0"  *ngIf="auth.showStatus()"  routerLinkActive="active">Authors</a>
+</div>
